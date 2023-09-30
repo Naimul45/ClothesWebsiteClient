@@ -15,7 +15,9 @@ const BookingModal = ({ prodDet }) => {
   const { data: total = [] } = useQuery({
     queryKey: ["total"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:4000/cartTotal");
+      const res = await fetch(
+        "https://camera-shop-server.vercel.app/cartTotal"
+      );
       const data = res.json();
 
       return data;
@@ -45,7 +47,7 @@ const BookingModal = ({ prodDet }) => {
     };
     // console.log(orderDetails);
 
-    fetch("http://localhost:4000/confirmorder", {
+    fetch("https://camera-shop-server.vercel.app/confirmorder", {
       method: "POST",
       headers: {
         "content-type": "application/json",

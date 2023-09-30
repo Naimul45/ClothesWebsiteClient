@@ -21,7 +21,7 @@ const DetailsProduct = () => {
     queryKey: ["reviews"],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:4000/review?product=${product[0].name}`
+        `https://camera-shop-server.vercel.app/review?product=${product[0].name}`
       );
       const data = res.json();
       refetch();
@@ -48,7 +48,7 @@ const DetailsProduct = () => {
       value: value,
     };
 
-    fetch("http://localhost:4000/addtocart", {
+    fetch("https://camera-shop-server.vercel.app/addtocart", {
       method: "POST",
       headers: {
         "content-type": "application/json",

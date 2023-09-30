@@ -10,7 +10,7 @@ const ProductOfShop = () => {
   const [prod, setProd] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/category?name=${shop?.name}`)
+    fetch(`https://camera-shop-server.vercel.app/category?name=${shop?.name}`)
       .then((res) => res.json())
       .then((data) => {
         setProd(data);
@@ -22,7 +22,7 @@ const ProductOfShop = () => {
   //   queryKey: ["productsData"],
   //   queryFn: async () => {
   //     const res = await fetch(
-  //       `http://localhost:4000/category?name=${shop?.name}`
+  //       `https://camera-shop-server.vercel.app/category?name=${shop?.name}`
   //     );
   //     const data = res.json();
 
@@ -47,7 +47,7 @@ const ProductOfShop = () => {
 
         <div className="px-6 py-6 grid lg:grid-cols-5 grid-cols-2 gap-6 lg:ml-2 ml-[-10px]">
           {prod?.map((prod) => (
-            <Link to={`/especificprod/${prod._id}`}>
+            <Link to={`/especificproduct/${prod._id}`}>
               <CategoryProduct product={prod}></CategoryProduct>
             </Link>
           ))}

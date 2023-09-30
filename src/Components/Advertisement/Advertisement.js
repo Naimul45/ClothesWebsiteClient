@@ -10,7 +10,7 @@ const Advertisement = () => {
   const { data: products = [] } = useQuery({
     queryKey: ["productsData"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:4000/products");
+      const res = await fetch("https://camera-shop-server.vercel.app/products");
       const data = res.json();
       return data;
     },

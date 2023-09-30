@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         path: "/shop/:id",
         element: <ProductOfShop></ProductOfShop>,
         loader: async ({ params }) =>
-          fetch(`http://localhost:4000/shop/${params.id}`),
+          fetch(`https://camera-shop-server.vercel.app/shop/${params.id}`),
       },
       {
         path: "/login",
@@ -48,13 +48,17 @@ const router = createBrowserRouter([
         path: "/especificprod/:id",
         element: <DetailsProduct></DetailsProduct>,
         loader: async ({ params }) =>
-          fetch(`http://localhost:4000/especificprod/${params.id}`),
+          fetch(
+            `https://camera-shop-server.vercel.app/especificprod/${params.id}`
+          ),
       },
       {
         path: "/especificproduct/:id",
         element: <DetailsProduct></DetailsProduct>,
         loader: async ({ params }) =>
-          fetch(`http://localhost:4000/especificproduct/${params.id}`),
+          fetch(
+            `https://camera-shop-server.vercel.app/especificproduct/${params.id}`
+          ),
       },
     ],
   },

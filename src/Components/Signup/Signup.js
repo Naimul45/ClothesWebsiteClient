@@ -24,7 +24,7 @@ const Signup = () => {
           .then(() => {})
           .catch(() => {});
 
-        fetch("http://localhost:4000/users", {
+        fetch("https://camera-shop-server.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

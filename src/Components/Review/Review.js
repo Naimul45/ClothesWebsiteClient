@@ -11,7 +11,7 @@ const Review = ({ product }) => {
       data,
     };
     console.log(customerReview);
-    fetch("http://localhost:4000/review", {
+    fetch("https://camera-shop-server.vercel.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

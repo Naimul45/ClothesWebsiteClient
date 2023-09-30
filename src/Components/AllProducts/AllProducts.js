@@ -7,7 +7,9 @@ const AllProducts = () => {
   const { data: manyproducts = [] } = useQuery({
     queryKey: ["shops"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:4000/manyproducts");
+      const res = await fetch(
+        "https://camera-shop-server.vercel.app/manyproducts"
+      );
       const data = res.json();
       return data;
     },

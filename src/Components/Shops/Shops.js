@@ -8,7 +8,7 @@ const Shops = () => {
   const { data: shops = [] } = useQuery({
     queryKey: ["shopsData"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:4000/shops");
+      const res = await fetch("https://camera-shop-server.vercel.app/shops");
       const data = res.json();
       return data;
     },

@@ -19,7 +19,7 @@ const Orders = () => {
     queryKey: ["orders"],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:4000/addtocart?email=${user?.email}`
+        `https://camera-shop-server.vercel.app/addtocart?email=${user?.email}`
       );
       const data = res.json();
       return data;
@@ -27,7 +27,7 @@ const Orders = () => {
   });
 
   const handleDelete = (order) => {
-    fetch(`http://localhost:4000/confirmorder/${order._id}`, {
+    fetch(`https://camera-shop-server.vercel.app/confirmorder/${order._id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -40,7 +40,7 @@ const Orders = () => {
 
   const onSubmits = (data) => {
     // console.log("data :", data);
-    fetch(`http://localhost:4000/cartTotal`, {
+    fetch(`https://camera-shop-server.vercel.app/cartTotal`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
