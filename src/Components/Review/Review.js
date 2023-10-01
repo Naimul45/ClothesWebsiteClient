@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 
 const Review = ({ product }) => {
-  console.log("product  :", product);
+  // console.log("product  :", product);
   const { register, handleSubmit } = useForm();
   const reviewhandler = (data) => {
     const customerReview = {
@@ -20,7 +20,7 @@ const Review = ({ product }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         toast.success("Your review has been successfully added");
       })
       .catch((error) => {

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Rev = ({ review }) => {
-  console.log("review  : ", review);
+  // console.log("review  : ", review);
   return (
     <div className="indicator lg:mx-0 mx-3">
       <div className="card border">

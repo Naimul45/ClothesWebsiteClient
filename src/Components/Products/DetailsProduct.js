@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useContext } from "react";
@@ -11,7 +11,12 @@ import Rev from "../Review/Rev";
 
 const DetailsProduct = () => {
   const product = useLoaderData();
-  console.log("prod", product[0]);
+  // console.log("prod", product[0]);
+  const [directOrdersLink, setDirectOrdersLink] = useState("");
+  if (directOrdersLink) {
+    console.log("direct : ", directOrdersLink);
+    <Link to="/orders">?</Link>;
+  }
 
   const { register, handleSubmit } = useForm();
   const { user } = useContext(AuthContext);
@@ -57,12 +62,13 @@ const DetailsProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         toast.success("AddToCart successful!");
         refetch();
+        setDirectOrdersLink(data);
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         toast.error("error.message");
       });
   };

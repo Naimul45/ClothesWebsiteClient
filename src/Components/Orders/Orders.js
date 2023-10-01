@@ -6,8 +6,8 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from "react-hot-toast";
 
 const Orders = () => {
-  const [order, setOrder] = useState({});
-  console.log("order :", order);
+  // const [order, setOrder] = useState({});
+  // console.log("order :", order);
   const { user } = useContext(AuthContext);
   // const totalPrice = order.data.RecentPrice * order.value;
 

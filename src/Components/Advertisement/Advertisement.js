@@ -20,7 +20,8 @@ const Advertisement = () => {
     className: "center",
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 4,
+    slidesToShow: 3,
+
     swipeToSlide: true,
     afterChange: function (index) {
       console.log(

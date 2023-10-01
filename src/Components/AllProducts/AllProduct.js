@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const AllProduct = ({ prod }) => {
   // console.log("product", prod);
+  
   return (
     <Link
       to={`/especificproduct/${prod._id}`}

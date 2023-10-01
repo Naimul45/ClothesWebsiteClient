@@ -3,10 +3,23 @@ import { Link } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
-
+import { useQuery } from "@tanstack/react-query";
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
   // console.log("user", user);
+
+  const { refetch, data: orders = [] } = useQuery({
+    queryKey: ["orders"],
+    queryFn: async () => {
+      const res = await fetch(
+        `https://camera-shop-server.vercel.app/addtocart?email=${user?.email}`
+      );
+      const data = res.json();
+      return data;
+    },
+  });
+
+  console.log("orders : ", orders.length);
 
   const handleLogout = () => {
     logOut()
@@ -41,7 +54,13 @@ const Navbar = () => {
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                   />
                 </svg>
-                <span className="badge badge-sm indicator-item">8</span>
+                {orders ? (
+                  <span className="badge badge-sm indicator-item">
+                    {orders.length}
+                  </span>
+                ) : (
+                  <span className="badge badge-sm indicator-item">0</span>
+                )}
               </div>
             </label>
             <div
@@ -49,12 +68,14 @@ const Navbar = () => {
               className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
             >
               <div className="card-body">
-                <span className="font-bold text-lg">8 Items</span>
-                <span className="text-info">Subtotal: $999</span>
+                <span className="font-bold text-lg">
+                  {orders?.length} Items
+                </span>
+                {/* <span className="text-info">Subtotal: $999</span> */}
                 <div className="card-actions">
-                  <button className="btn btn-primary btn-block">
-                    View cart
-                  </button>
+                  <Link to="/orders" className="btn btn-primary btn-block">
+                    <button>View cart</button>
+                  </Link>
                 </div>
               </div>
             </div>
