@@ -82,10 +82,7 @@ const Orders = () => {
                     <div className="flex items-center space-x-3">
                       <div className="avatar">
                         <div className="mask mask-squircle w-12 h-12">
-                          <img
-                            src="/tailwind-css-component-profile-2@56w.png"
-                            alt="Avatar Tailwind CSS Component"
-                          />
+                          <img src={order?.img.img} alt="" />
                         </div>
                       </div>
                       <div>
@@ -120,7 +117,7 @@ const Orders = () => {
 
       <form
         onSubmit={handleSubmit(onSubmits)}
-        className="border border-solid border-blue-100 lg:ml-4 ml-2 lg:w-96 w-[345px] lg:mt-0 mt-4"
+        className="border border-solid border-blue-100 lg:ml-4 ml-2 lg:w-96 w-[345px] lg:mt-0 mt-4 h-[316px]"
       >
         <h1 className="text-2xl font-semibold text-slate-500 m-4">
           CART TOTALS
@@ -143,9 +140,10 @@ const Orders = () => {
               type="text"
               name=""
               id=""
-              placeholder="Enter Your Address"
-              className="text-base px-2  border border-solid  border-neutral-400"
+              value="Shipping To Dhaka"
+              className="text-base px-2 text-black  border border-solid  border-neutral-400"
               {...register("address")}
+              readOnly
             />
           </div>
           <hr />

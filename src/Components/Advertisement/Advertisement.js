@@ -30,7 +30,7 @@ const Advertisement = () => {
     },
   };
   return (
-    <div className="bg-black  mt-10 pb-20 pt-5  px-3">
+    <div className="bg-black  lg:mt-10 lg:pb-20 lg:pt-5  lg:px-3">
       <div>
         <h1 className="text-2xl font-bold shops mt-3 text-white pb-8">
           Advertisement
@@ -43,9 +43,9 @@ const Advertisement = () => {
             Products
           </h1>
           {/* slick-slide slick-active slick-current */}
-          <Slider {...settings}>
+          <Slider {...settings} className="w-[400px]">
             {products?.map((product) => (
-              <div className="grid lg:grid-cols-4 grid-cols-2 gap-3">
+              <div>
                 <Slide product={product}></Slide>
               </div>
             ))}

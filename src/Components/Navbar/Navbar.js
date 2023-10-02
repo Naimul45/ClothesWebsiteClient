@@ -30,14 +30,14 @@ const Navbar = () => {
   };
   return (
     <div className="navbarvai">
-      <div className="navbar px-20 navbarvai">
+      <div className="navbar lg:px-20 px-3 navbarvai">
         <div className="flex-1">
-          <Link className="btn btn-ghost normal-case text-2xl text-white">
+          <Link className="btn btn-ghost normal-case lg:text-2xl text-lg text-white">
             MUHAMMAD
           </Link>
         </div>
         <div className="flex-none">
-          <div className="dropdown dropdown-end pr-16">
+          <div className="dropdown dropdown-end lg:pr-16 pr-4">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <div className="indicator">
                 <svg
@@ -83,8 +83,8 @@ const Navbar = () => {
           <div className="dropdown dropdown-end">
             <div className="flex">
               {user ? (
-                <button className="btn btn-ghost text-white">
-                  <AiOutlineUser className="w-10 text-white text-2xl  font-bold pr-2" />
+                <button className="btn btn-ghost text-white lg:inline block lg:w-full w-[120px]">
+                  <AiOutlineUser className="w-10 text-white text-2xl  font-bold pr-2 lg:inline block lg:ml-0 ml-5" />
                   {user.displayName}
                 </button>
               ) : (
@@ -120,24 +120,24 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex py-2 px-20 ">
+      <div className="flex py-2 lg:px-20 px-3 ">
         <Link to="/">
-          <button className="btn btn-ghost hover:btn-primary btn-sm mr-3 text-white">
+          <button className="btn btn-ghost hover:btn-primary btn-sm mr-3 text-white lg:block hidden ">
             Home
           </button>
         </Link>
         <Link to="/allshops">
-          <button className="btn btn-ghost hover:btn-primary btn-sm mr-3 text-white">
+          <button className="btn btn-ghost hover:btn-primary btn-sm lg:mr-3 mr-[-4px] text-white">
             Shops
           </button>
         </Link>
         <Link to="/allproducts">
-          <button className="btn btn-ghost hover:btn-primary btn-sm mr-3 text-white">
+          <button className="btn btn-ghost hover:btn-primary btn-sm lg:mr-3 mr-[-4px] text-white">
             Products
           </button>
         </Link>
         <Link to="/orders">
-          <button className="btn btn-ghost hover:btn-primary btn-sm mr-3 text-white">
+          <button className="btn btn-ghost hover:btn-primary btn-sm lg:mr-3 mr-[-4px] text-white">
             Orders
           </button>
         </Link>

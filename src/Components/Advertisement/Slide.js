@@ -7,11 +7,7 @@ const Slide = ({ product }) => {
       <div className="cards">
         <p className="card-title">{product.name}</p>
         <p className="small-desc">
-          <img
-            style={{ width: "180px", height: "110px" }}
-            src={product.img}
-            alt=""
-          />
+          <img className="lg:w-[180px] h-[110px]" src={product.img} alt="" />
 
           <button className="btn btn-sm  mt-3  button text-white px-6 btnVai">
             Details <AiOutlineArrowRight className="ml-2 text-lg" />

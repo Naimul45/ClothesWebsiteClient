@@ -12,11 +12,6 @@ import Rev from "../Review/Rev";
 const DetailsProduct = () => {
   const product = useLoaderData();
   // console.log("prod", product[0]);
-  const [directOrdersLink, setDirectOrdersLink] = useState("");
-  if (directOrdersLink) {
-    console.log("direct : ", directOrdersLink);
-    <Link to="/orders">?</Link>;
-  }
 
   const { register, handleSubmit } = useForm();
   const { user } = useContext(AuthContext);
@@ -51,6 +46,7 @@ const DetailsProduct = () => {
       email: user?.email,
       data,
       value: value,
+      img: product[0],
     };
 
     fetch("https://camera-shop-server.vercel.app/addtocart", {
@@ -65,7 +61,6 @@ const DetailsProduct = () => {
         // console.log(data);
         toast.success("AddToCart successful!");
         refetch();
-        setDirectOrdersLink(data);
       })
       .catch((error) => {
         // console.log(error);
@@ -126,7 +121,6 @@ const DetailsProduct = () => {
                     className="w-52 border border-solid border-current px-5 py-1"
                     placeholder="Please select"
                   >
-                    <option value="please select">please select</option>
                     <option value="small">S - Chest 35-37</option>
                     <option value="medium">M - Chest 38-40</option>
                     <option value="large">L - Chest 40-42</option>
