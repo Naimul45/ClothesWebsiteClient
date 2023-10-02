@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const RecentBestProduct = ({ product }) => {
   return (
     <Link to={`/especificprod/${product._id}`}>
-      <div className="cards ">
+      <div className="cards lg:w-[230px]">
         <p className="card-title">{product.name}</p>
         <p className="small-desc">
           <img

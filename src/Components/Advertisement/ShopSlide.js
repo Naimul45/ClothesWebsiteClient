@@ -32,7 +32,7 @@ const ShopSlide = () => {
     <div>
       <Slider
         {...settings}
-        className="grid lg:grid-cols-3 gap-3 shop-slide-w-h w-h-set  mt-10"
+        className="shop-slide-w-h lg:w-[402px] w-[310px] lg:h-[217px] lg:mt-10 mt-4 lg:ml-0 ml-[25px]"
       >
         {shops?.map((shop) => (
           <ShopsCard shop={shop}></ShopsCard>

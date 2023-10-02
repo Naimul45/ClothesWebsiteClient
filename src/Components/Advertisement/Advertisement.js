@@ -20,7 +20,7 @@ const Advertisement = () => {
     className: "center",
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 3,
+    slidesToShow: 2,
 
     swipeToSlide: true,
     afterChange: function (index) {
@@ -30,20 +30,23 @@ const Advertisement = () => {
     },
   };
   return (
-    <div className="bg-black  lg:mt-10 lg:pb-20 lg:pt-5  lg:px-3">
+    <div className="bg-black  lg:mt-10 lg:pb-25 pb-[130px] lg:pt-5  lg:px-3">
       <div>
-        <h1 className="text-2xl font-bold shops mt-3 text-white pb-8">
+        <h1 className="text-2xl font-bold shops lg:mt-3 lg:pt-0 pt-6 text-white pb-8">
           Advertisement
         </h1>
       </div>
 
       <div className="flex lg:flex-row flex-col">
         <div>
-          <h1 className="text-2xl font-bold  text-white marginLeft">
+          <h1 className="text-2xl font-bold  text-white lg:ml-[300px] lg:mb-6 lg:text-left text-center">
             Products
           </h1>
           {/* slick-slide slick-active slick-current */}
-          <Slider {...settings} className="w-[400px]">
+          <Slider
+            {...settings}
+            className="lg:w-[550px] w-[300px] lg:h-[247px] h-[250px] lg:ml-[65px] ml-[30px] lg:mr-[200px]"
+          >
             {products?.map((product) => (
               <div>
                 <Slide product={product}></Slide>
@@ -53,7 +56,9 @@ const Advertisement = () => {
         </div>
 
         <div className="w-h-set">
-          <h1 className="text-2xl font-bold text-white text-center">Shops</h1>
+          <h1 className="text-2xl font-bold text-white text-center lg:pt-0 pt-[50px]">
+            Shops
+          </h1>
           <ShopSlide></ShopSlide>
         </div>
       </div>

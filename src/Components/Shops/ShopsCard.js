@@ -6,7 +6,7 @@ const ShopsCard = ({ shop }) => {
     <Link to={`/shop/${shop._id}`}>
       <div className="lg:w-[188px] w-[165px] h-[217px] shop-card">
         <div className="lg:w-[188px] w-[165px] h-[217px]">
-          <div className="lg:w-[188px] w-[165px] h-[217px] p-4">
+          <div className="lg:w-[188px] w-[165px] h-[217px] pt-4 pb-4 pr-4 lg:pl-4 pl-[11px] ">
             <div className="lg:w-[188px] w-[165px] h-[135px]">
               <img
                 src={shop?.img}

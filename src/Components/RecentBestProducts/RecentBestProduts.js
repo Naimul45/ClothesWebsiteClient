@@ -29,8 +29,13 @@ const RecentBestProduts = () => {
   };
   return (
     <div className="pb-5">
-      <h1 className="text-2xl font-bold shops mt-6">Recent Best Products</h1>
-      <Slider {...settings} className="grid lg:grid-cols-3 gap-3 w-1208 mb-10">
+      <h1 className="text-2xl font-bold shops mt-6 lg:pb-4">
+        Recent Best Products
+      </h1>
+      <Slider
+        {...settings}
+        className="grid lg:grid-cols-3 gap-3 w-1208 mb-10 lg:ml-[50px]"
+      >
         {products?.map((product) => (
           <RecentBestProduct product={product}></RecentBestProduct>
         ))}

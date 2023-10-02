@@ -120,7 +120,9 @@ const Home = () => {
       <Shops></Shops>
       <Products></Products>
       <Advertisement></Advertisement>
-      <RecentBestProduts></RecentBestProduts>
+      <div className="lg:block hidden">
+        <RecentBestProduts></RecentBestProduts>
+      </div>
     </>
   );
 };

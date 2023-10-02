@@ -121,7 +121,7 @@
   background-color: #f2f8f9;
   border-radius: 10px;
   padding: 2em 1.2em;
-  margin: 12px;
+  /* margin: 12px; */
   text-decoration: none;
   z-index: 0;
   overflow: hidden;
@@ -161,12 +161,7 @@
 /* product */
 
 /* carousel */
-  .slick-slider{
-    margin-left: 65px;
-    margin-right: 74px;
-    width :750px;
-    height:247px;
-  }
+ 
 
 .slick-slider button{
     background-color: black;
@@ -174,13 +169,13 @@
 .slick-slider button:hover{
     background-color: black;
 }
-.marginLeft{
+/* .marginLeft{
   margin-left: 380px;
-}
-.btnVai{
+} */
+/* .btnVai{
     width: 143px;
     margin-left: -8px;
-}
+} */
 
 /* carousel */
 
