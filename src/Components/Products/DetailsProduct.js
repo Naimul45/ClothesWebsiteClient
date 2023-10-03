@@ -13,10 +13,15 @@ const DetailsProduct = () => {
   const product = useLoaderData();
   // console.log("prod", product[0]);
 
+  const handleToast = () => {
+    toast.error("Please Sign in");
+  };
+
   const { register, handleSubmit } = useForm();
   const { user } = useContext(AuthContext);
   const [value, setValue] = useState(1);
-
+  // const [reviewVai, setReviewVai] = useState("");
+  // console.log("reviewVai", reviewVai);
   const { refetch, data: reviews = [] } = useQuery({
     queryKey: ["reviews"],
     queryFn: async () => {
@@ -154,9 +159,19 @@ const DetailsProduct = () => {
               </div>
 
               <div className="flex my-3 ">
-                <button className="btn bg-gradient-to-r from-purple-500 to-fuchsia-700 px-10 text-white rounded-none lg:w-[208px] w-[330px] ">
-                  Add TO Cart
-                </button>
+                {user ? (
+                  <button className="btn bg-gradient-to-r from-purple-500 to-fuchsia-700 px-10 text-white rounded-none lg:w-[208px] w-[330px] ">
+                    Add TO Cart
+                  </button>
+                ) : (
+                  <button
+                    className="btn bg-black px-10 text-black rounded-none lg:w-[208px] w-[330px] text-white hover:text-black  "
+                    onClick={() => handleToast()}
+                    disabled="disabled"
+                  >
+                    Add TO Cart
+                  </button>
+                )}
               </div>
               <hr />
               <div className="py-4">
@@ -181,11 +196,15 @@ const DetailsProduct = () => {
         <hr className="mt-8 text-lg font-semibold" />
       </form>
       <div className="flex justify-around mt-5 lg:flex-row flex-col ">
-        <div className="grid grid-cols-1 gap-3">
-          {reviews?.map((review) => (
-            <Rev review={review}></Rev>
-          ))}
+        <div>
+          <h1 className="text-xl font-semibold lg:ml-0 ml-3">Reviews</h1>
+          <div className="grid grid-cols-1 gap-3">
+            {reviews?.map((review) => (
+              <Rev review={review}></Rev>
+            ))}
+          </div>
         </div>
+
         <Review product={product}></Review>
       </div>
     </>

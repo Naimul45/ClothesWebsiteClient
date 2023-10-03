@@ -2,15 +2,16 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 
-const Review = ({ product }) => {
+const Review = ({ product, setReviewVai }) => {
   // console.log("product  :", product);
   const { register, handleSubmit } = useForm();
   const reviewhandler = (data) => {
+    console.log("data :", data);
     const customerReview = {
       product: product[0].name,
       data,
     };
-    console.log(customerReview);
+    // console.log(customerReview);
     fetch("https://camera-shop-server.vercel.app/review", {
       method: "POST",
       headers: {
@@ -22,6 +23,7 @@ const Review = ({ product }) => {
       .then((data) => {
         // console.log(data);
         toast.success("Your review has been successfully added");
+        window.location.reload();
       })
       .catch((error) => {
         console.log(error);
@@ -29,27 +31,56 @@ const Review = ({ product }) => {
       });
   };
 
+  // const ratingHandler = (rating) => {
+  //   console.log("data :", rating);
+
+  //   // ekhane if er kaj ta dekhanor jonno rating star a double click korte hocche
+  //   if (rating) {
+  //     setReviewVai(rating);
+  //   }
+  // };
   return (
     <form
       onSubmit={handleSubmit(reviewhandler)}
-      className="lg:mt-0 mt-6 lg:mx-0 mx-3"
+      className="lg:mt-0 mt-6 lg:mx-0 mx-3 pb-6"
     >
       <h1 className="text-xl font-semibold">Add A Review</h1>
-      <label>
+      {/* <label>
         Your rating :{" "}
         <div className="rating inline mt-2">
-          <input type="radio" name="rating-1" className="mask mask-star" />
           <input
             type="radio"
-            name="rating-1"
+            className="mask mask-star"
+            {...register("rating", { required: true })}
+            onClick={() => setReviewVai("rating : 1")}
+          />
+          <input
+            type="radio"
             className="mask mask-star"
             checked
+            {...register("rating", { required: true })}
+            onClick={() => setReviewVai("rating : 2")}
           />
-          <input type="radio" name="rating-1" className="mask mask-star" />
-          <input type="radio" name="rating-1" className="mask mask-star" />
-          <input type="radio" name="rating-1" className="mask mask-star" />
+          <input
+            type="radio"
+            className="mask mask-star"
+            {...register("rating", { required: true })}
+            onClick={() => setReviewVai("rating : 3")}
+          />
+          <input
+            type="radio"
+            className="mask mask-star"
+            {...register("rating", { required: true })}
+            onClick={() => setReviewVai("rating : 4")}
+          />
+          <input
+            type="radio"
+            className="mask mask-star"
+            {...register("rating", { required: true })}
+            onClick={() => setReviewVai("rating : 5")}
+          />
         </div>
-      </label>
+      </label> */}
       <br />
       <label className="mt-2">Your review : </label>
       <br />
@@ -74,7 +105,7 @@ const Review = ({ product }) => {
       <input
         {...register("email", { required: true })}
         type="email"
-        className="input  lg:w-[566px] border-solid border border-stone-500"
+        className="input w-full  lg:w-[566px] border-solid border border-stone-500"
         required
       />
       <br />

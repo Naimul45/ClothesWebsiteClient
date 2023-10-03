@@ -19,7 +19,7 @@ const Navbar = () => {
     },
   });
 
-  console.log("orders : ", orders.length);
+  // console.log("orders : ", orders.length);
 
   const handleLogout = () => {
     logOut()
