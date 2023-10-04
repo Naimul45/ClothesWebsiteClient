@@ -4,6 +4,7 @@ import Main from "../../Layout/Main";
 import ProductOfShop from "../../ProductOfShop/ProductOfShop";
 import AllProducts from "../AllProducts/AllProducts";
 import AllShops from "../AllShops/AllShops";
+import DeliveryAddress from "../DeliveryAddress/DeliveryAddress";
 import Login from "../Login/Login";
 import Orders from "../Orders/Orders";
 import DetailsProduct from "../Products/DetailsProduct";
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/orders",
         element: <Orders></Orders>,
+      },
+      {
+        path: "/deliveryaddress",
+        element: <DeliveryAddress></DeliveryAddress>,
       },
       {
         path: "/especificprod/:id",

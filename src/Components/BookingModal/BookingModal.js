@@ -76,16 +76,16 @@ const BookingModal = ({ prodDet }) => {
         </form>
         <h3 className="font-bold text-lg">Confirm Your Order</h3>
         <div className="border border-solid border-gray-400 text-lg font-base rounded mt-3">
-          <div className="flex justify-between mt-3 ml-6 lg:mr-60 mr-16 ">
+          <div className="flex justify-between mt-3 ml-6 lg:mr-60 mr-24 ">
             <h3>Subtotal </h3>
             <p>৳ {}</p>
           </div>
-          <div className="flex justify-between mt-3 ml-6 lg:mr-28 mr-16 ">
+          <div className="flex justify-between mt-3 ml-6 lg:mr-28  ">
             <h3>Shipping</h3>
-            <p> Shipping To Dhaka</p>
+            <p className="lg:ml-6 ml-[68px]"> Shipping To Dhaka</p>
           </div>
 
-          <div className="flex justify-between mt-3 ml-6 lg:mr-60 mb-4 mr-16 ">
+          <div className="flex justify-between mt-3 ml-6 lg:mr-60 mb-4 mr-24 ">
             <h3 className="text-emerald-800 text-xl font-semibold">Total </h3>
             <p> ৳</p>
           </div>

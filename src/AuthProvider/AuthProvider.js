@@ -6,11 +6,14 @@ import {
   signInWithEmailAndPassword,
   signOut,
   updateProfile,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 import app from "../firebase/firease.config";
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -20,6 +23,9 @@ const AuthProvider = ({ children }) => {
   };
   const signinUser = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
+  };
+  const signinwithGoogle = () => {
+    return signInWithPopup(auth, provider);
   };
   const profileUpdate = (userInfo) => {
     return updateProfile(auth.currentUser, userInfo);
@@ -41,6 +47,7 @@ const AuthProvider = ({ children }) => {
     signinUser,
     logOut,
     user,
+    signinwithGoogle,
   };
 
   return (

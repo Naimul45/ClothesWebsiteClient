@@ -1,11 +1,12 @@
 import React from "react";
 import { Carousel } from "react-carousel-minimal";
 import Advertisement from "../Components/Advertisement/Advertisement";
-import Delivery from "../Components/Delivery/Delivery";
+
 import Products from "../Components/Products/Products";
 import RecentBestProduts from "../Components/RecentBestProducts/RecentBestProduts";
 import Shops from "../Components/Shops/Shops";
 import { useEffect, useState } from "react";
+import Delivery from "../Components/Delivery/Delivery";
 
 const Home = () => {
   const data = [

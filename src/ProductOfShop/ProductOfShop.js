@@ -36,14 +36,16 @@ const ProductOfShop = () => {
         <div className="p-4 flex flex-row">
           <img src={shop.img} alt="" className="w-32 h-32" />
           <div className="ml-4">
-            <h1 className="text-xl font-bold">{shop.name}</h1>
-            <h2 className="text-xl font-bold">Dhaka , Bangladesh</h2>
+            <h1 className="lg:text-xl text-base font-bold">{shop.name}</h1>
+            <h2 className="lg:text-xl text-base font-bold">
+              Dhaka , Bangladesh
+            </h2>
           </div>
         </div>
       </div>
 
       <div className="bg-slate-200">
-        <h1 className="text-2xl font-bold mx-8 mt-8 pt-4">Products</h1>
+        <h1 className="text-2xl font-bold lg:mx-8 mx-4 mt-8 pt-4">Products</h1>
 
         <div className="px-6 py-6 grid lg:grid-cols-5 grid-cols-2 gap-6 lg:ml-2 ml-[-10px]">
           {prod?.map((prod) => (

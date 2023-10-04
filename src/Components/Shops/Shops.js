@@ -20,7 +20,7 @@ const Shops = () => {
         <h1 className="text-3xl font-bold p-6">Shops</h1>
         <div className="p-6">
           <Link to="/allshops">
-            <button className="btn btn-sm  button text-white px-6">
+            <button className="btn btn-sm  button text-white px-6 w-[160px]">
               See more <AiOutlineArrowRight className="ml-2 text-lg" />
             </button>
           </Link>

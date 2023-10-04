@@ -5,9 +5,9 @@ const Delivery = () => {
   return (
     <div>
       {/* .delivery {
-  margin-left: 65px;
-  margin-right: 74px;
-  margin-top: 117px;  
+margin-left: 65px;
+margin-right: 74px;
+margin-top: 117px;  
 } */}
       <div className="grid grid-cols-4 gap-3  delivery  lg:mt-0 mt-3 lg:ml-16 lg:mr-20 mr-4 lg:mt-28 ml-5 ">
         <div className="cardblur shop-card lg:w-56 w-16 lg:h-44 h-12">

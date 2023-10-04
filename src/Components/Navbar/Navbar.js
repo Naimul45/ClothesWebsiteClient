@@ -99,15 +99,15 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li>
+                {/* <li>
                   <a className="justify-between">
                     Profile
                     <span className="badge">New</span>
                   </a>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <a>Settings</a>
-                </li>
+                </li> */}
 
                 <li onClick={() => handleLogout()}>
                   <a>Logout</a>
@@ -136,16 +136,22 @@ const Navbar = () => {
             Products
           </button>
         </Link>
-        <Link to="/orders">
-          <button className="btn btn-ghost hover:btn-primary btn-sm lg:mr-3 mr-[-4px] text-white">
-            Orders
-          </button>
-        </Link>
-        <Link to="/">
-          <button className="btn btn-ghost hover:btn-primary btn-sm mr-3 text-white">
-            Delivery Address
-          </button>
-        </Link>
+        {user ? (
+          <>
+            <Link to="/orders">
+              <button className="btn btn-ghost hover:btn-primary btn-sm lg:mr-3 mr-[-4px] text-white">
+                Orders
+              </button>
+            </Link>
+            <Link to="/deliveryaddress">
+              <button className="btn btn-ghost hover:btn-primary btn-sm mr-3 text-white">
+                Delivery Address
+              </button>
+            </Link>
+          </>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
