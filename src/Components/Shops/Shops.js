@@ -15,7 +15,8 @@ const Shops = () => {
   });
 
   return (
-    <div className="bg-base-200 mt-6  lg:px-8 rounded ">
+    <div className=" mt-6  lg:px-8 rounded ">
+      {/* bg-base-200 */}
       <div className="flex justify-between">
         <h1 className="text-3xl font-bold p-6">Shops</h1>
         <div className="p-6">

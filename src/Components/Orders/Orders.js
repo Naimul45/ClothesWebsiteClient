@@ -58,8 +58,8 @@ const Orders = () => {
   };
 
   return (
-    <div className=" flex lg:mx-8 lg:my-6 lg:flex-row flex-col">
-      <div className="overflow-x-auto ">
+    <div className=" flex lg:mx-8 lg:my-6 lg:flex-row flex-col bg-white">
+      <div className="overflow-x-auto bg-white">
         <table className="table lg:w-[835px]">
           {/* head */}
           <thead className="bg-slate-300">
@@ -117,7 +117,7 @@ const Orders = () => {
 
       <form
         onSubmit={handleSubmit(onSubmits)}
-        className="border border-solid border-blue-100 lg:ml-4 ml-2 lg:w-96 w-[345px] lg:mt-0 mt-4 h-[316px]"
+        className="border border-solid border-blue-100 lg:ml-4 ml-2 lg:w-96 w-[345px] lg:mt-0 mt-4 lg:h-[316px] h-[326px] bg-white mb-4"
       >
         <h1 className="text-2xl font-semibold text-slate-500 m-4">
           CART TOTALS
@@ -141,7 +141,7 @@ const Orders = () => {
               name=""
               id=""
               value="Shipping To Dhaka"
-              className="text-base px-2 text-black  border border-solid  border-neutral-400"
+              className="text-base pl-2 text-black  border border-solid  border-neutral-400 lg:w-[192px] w-[170px]"
               {...register("address")}
               readOnly
             />

@@ -55,7 +55,8 @@ const Advertisement = () => {
           </Slider>
         </div>
 
-        <div className="w-h-set">
+        <div>
+          {/*uporer div  er :  className="w-h-set" */}
           <h1 className="text-2xl font-bold text-white text-center lg:pt-0 pt-[50px]">
             Shops
           </h1>

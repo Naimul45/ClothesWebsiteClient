@@ -29,7 +29,8 @@ const AllShops = () => {
   });
   const filteredItems = getFilteredItems(query, shops);
   return (
-    <div className="bg-slate-50 lg:px-16 px-0  py-10 ">
+    <div className=" lg:px-16 px-0  py-10 ">
+      {/* bg-slate-50 */}
       <div className="flex justify-between lg:flex-row flex-col pt-1 lg:px-0 px-3 ">
         <h1 className="text-2xl font-bold">Shops</h1>
 
@@ -49,7 +50,7 @@ const AllShops = () => {
 
       <div className="grid lg:grid-cols-6 grid-cols-2 gap-3 pt-10 lg:mr-4 mr-5">
         {filteredItems?.map((shop) => (
-          <Link to={`/shop/${shop._id}`}>
+          <Link to={`/shop/${shop._id}`} className="lg:pl-0 pl-2">
             <AllShopsCard shop={shop}></AllShopsCard>
           </Link>
         ))}

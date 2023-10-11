@@ -32,7 +32,8 @@ const ProductOfShop = () => {
 
   return (
     <div>
-      <div className="mx-3 mt-3 border-solid border border-zinc-400 rounded shadow-xl ">
+      <div className="mx-3 mt-3 border-solid border  rounded shadow-xl bg-white">
+        {/* border-zinc-400 */}
         <div className="p-4 flex flex-row">
           <img src={shop.img} alt="" className="w-32 h-32" />
           <div className="ml-4">
@@ -44,7 +45,8 @@ const ProductOfShop = () => {
         </div>
       </div>
 
-      <div className="bg-slate-200">
+      <div className="">
+        {/* bg-slate-200 */}
         <h1 className="text-2xl font-bold lg:mx-8 mx-4 mt-8 pt-4">Products</h1>
 
         <div className="px-6 py-6 grid lg:grid-cols-5 grid-cols-2 gap-6 lg:ml-2 ml-[-10px]">

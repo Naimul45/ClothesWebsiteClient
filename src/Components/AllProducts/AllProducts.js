@@ -33,7 +33,8 @@ const AllProducts = () => {
   const filteredItems = getFilteredItems(query, manyproducts);
   // console.log("filteredItems :  ", filteredItems);
   return (
-    <div className="lg:px-16 px-0 lg:py-10 py-0 bg-slate-200">
+    <div className="lg:px-16 px-0 lg:py-10 py-0 ">
+      {/* bg-slate-200 */}
       <div className="flex justify-between  lg:flex-row flex-col pt-1 lg:px-0 px-3">
         <h1 className="text-2xl font-bold mt-3">Products</h1>
 

@@ -87,7 +87,7 @@ const Review = ({ product, setReviewVai }) => {
       <textarea
         {...register("review", { required: true })}
         type="text"
-        className="textarea textarea-ghost  w-full border-solid border border-stone-500 lg:h-44"
+        className="textarea textarea-ghost  w-full border-solid border border-stone-500 lg:h-44 bg-white"
         required
       ></textarea>
       <br />

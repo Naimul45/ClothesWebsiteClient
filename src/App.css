@@ -3,7 +3,11 @@
   padding: 0px;
   box-sizing: border-box;
   
-  ;
+  
+  
+}
+body{
+  background-color: #b5c99a
 }
 
 .navbarvai {
@@ -185,11 +189,11 @@
     height: 247px;
 }
 
-.w-h-set{
+/* .w-h-set{
   width: 402px;
   height: 217px;
   margin-left : 0px;
-}
+} */
 
 /* shop slide width height */
 

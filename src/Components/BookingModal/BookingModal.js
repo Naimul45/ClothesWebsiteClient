@@ -180,6 +180,7 @@ const BookingModal = ({ prodDet }) => {
             />
             <br />
           </div>
+
           <input
             type="submit"
             className="btn mt-4 w-full px-12 bg-gradient-to-r from-emerald-800 to-slate-800 text-white text-lg"

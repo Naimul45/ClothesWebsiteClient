@@ -15,12 +15,13 @@ const Products = () => {
   });
 
   return (
-    <div className="bg-slate-200 mt-6  lg:px-8 rounded">
+    <div className=" mt-6  lg:px-8 rounded pb-3">
+      {/* bg-slate-200 */}
       <div className="flex justify-between">
         <h1 className="text-3xl font-bold p-6 lg:ml-[-20px]">Products</h1>
         <div className="p-6">
           <Link to="/allproducts">
-            <button className="btn btn-sm  button text-white px-6  w-[145px]">
+            <button className="btn btn-sm  button text-white px-6  w-[139px]">
               See more <AiOutlineArrowRight className="ml-2 text-lg" />
             </button>
           </Link>
