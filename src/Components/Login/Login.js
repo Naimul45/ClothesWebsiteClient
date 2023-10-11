@@ -25,7 +25,10 @@ const Login = () => {
   };
 
   return (
-    <form className="hero min-h-screen" onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className="hero min-h-screen bg-white"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div className="hero-content flex-col lg:flex-row">
         <div className="text-center lg:text-left ">
           <img src="https://www.smartpos.website/Login.jpg" alt="" />

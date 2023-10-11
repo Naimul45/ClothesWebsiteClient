@@ -58,7 +58,7 @@ const Orders = () => {
   };
 
   return (
-    <div className=" flex lg:mx-8 lg:my-6 lg:flex-row flex-col bg-white">
+    <div className=" flex lg:px-8 lg:py-6 lg:flex-row flex-col bg-white">
       <div className="overflow-x-auto bg-white">
         <table className="table lg:w-[835px]">
           {/* head */}

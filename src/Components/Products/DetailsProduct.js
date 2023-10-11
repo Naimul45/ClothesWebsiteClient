@@ -164,13 +164,11 @@ const DetailsProduct = () => {
                     Add TO Cart
                   </button>
                 ) : (
-                  <button
-                    className="btn bg-black px-10 text-black rounded-none lg:w-[208px] w-[330px] text-white hover:text-black  "
-                    onClick={() => handleToast()}
-                    disabled="disabled"
-                  >
-                    Add TO Cart
-                  </button>
+                  <Link to="/login">
+                    <button className="btn bg-black px-10 text-black rounded-none lg:w-[208px] w-[330px] text-white hover:text-black  ">
+                      Add TO Cart
+                    </button>
+                  </Link>
                 )}
               </div>
               <hr />
